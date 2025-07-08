@@ -15,13 +15,17 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-2 mb-4">Career's Page</h1>
+        <h1 class="text-center mt-2 mb-4"> Career's Page</h1>
         <img class="img-fluid" id="banner" src="../static/banner.jpg" />
         <h2 class="text-center mt-2 mb-4">About us:</h2>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad veritatis facilis reprehenderit veniam alias architecto exercitationem ipsum, repellendus aut rerum magnam labore inventore eius pariatur expedita molestias! Inventore, consectetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           Repudiandae cumque aliquid nam dolor ratione debitis corporis, ut quam consequuntur vel earum at ab molestias, dolores reprehenderit quia officiis doloremque vitae.</p>
         <h2  class="text-center mt-2 mb-4">Open positions</h2>
-        <p >TODO - Show the job </p>
+        <p >
+            {% for job in jobs %}
+                {%include 'jobitem.html' %}
+            {%endfor%}
+        </p>
         <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
         <p class="mt-4">Copy Right 2022</p>
